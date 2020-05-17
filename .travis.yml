@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t arunhotra/reactt-test -f ./client/Dockerfile.dev ./client
+  - docker build -t arunhotra/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true arunhotra/react-test npm test -- --coverage
