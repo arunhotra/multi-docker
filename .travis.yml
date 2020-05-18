@@ -16,7 +16,7 @@ after_success:
   - docker build -t arunhotra/multi-worker ./worker
   #login to dockercli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  #push the images built to dockerhub .
+  #push the images built to dockerhub ..
   - docker push arunhotra/multi-client
   - docker push arunhotra/multi-nginx
   - docker push arunhotra/multi-server
